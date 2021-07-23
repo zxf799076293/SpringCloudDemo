@@ -1,0 +1,54 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.10.10.191:8848
+        namespace: 9c3591ba-7c76-44fd-91fc-620e72ccadae
+  application:
+    name: account
+#  profiles:
+#    active: prod
+  mail:
+    host: smtp.exmail.qq.com
+    username: zxf@linhuiba.com
+    password: JbQAG8yC7fbxWP9N
+    default-encoding: UTF-8
+  flyway:
+    #    flyway 的 clean 命令会删除指定 schema 下的所有 table, 杀伤力太大了, 应该禁掉.
+    clean-disabled: false
+    #    禁用/启用flyway
+    enabled: true
+    #    设定 SQL 脚本的目录,多个路径使用逗号分隔, 比如取值为 classpath:db/migration,filesystem:/sql-migrations
+    locations: classpath:db/migration
+    #    如果指定 schema 包含了其他表,但没有 flyway schema history 表的话, 在执行 flyway migrate 命令之前, 必须先执行 flyway baseline 命令.
+    baseline-on-migrate: true
+    #    指定 baseline 的版本号,缺省值为 1, 低于该版本号的 SQL 文件, migrate 的时候被忽略.
+    baseline-version: 1
+    #    sql文件编码
+    encoding: UTF-8
+    #    设定 flyway 的 metadata 表名, 缺省为 flyway_schema_history
+    table: flyway_schema_history_myapp
+    #    开发环境最好开启 outOfOrder, 生产环境关闭 outOfOrder .
+    out-of-order: false
+
+server:
+  port: 8083
+soul:
+  client:
+    register-type: nacos
+    server-lists: 10.10.10.191:8848
+    props:
+      contextPath: /snowaccount
+      port: 8083
+      nacosNameSpace: 13f87234-a69d-4188-b4f4-d0298efde6e6
+custom:
+  name: snow
+  age: 18
+#Ribbon负载均衡配置信息
+demo-d:
+ribbon.NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+mail:
+  #以谁来发送邮件
+  fromMail:
+    addr: zxf@linhuiba.com

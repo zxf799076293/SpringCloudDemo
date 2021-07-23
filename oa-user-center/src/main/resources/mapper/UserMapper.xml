@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.snow.oauserconsume.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.snow.oauserconsume.entity.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="is_linhui" jdbcType="TINYINT" property="isLinhui" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="product" jdbcType="VARCHAR" property="product" />
+    <result column="wechat_openid" jdbcType="VARCHAR" property="wechatOpenid" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="remember_token" jdbcType="VARCHAR" property="rememberToken" />
+    <result column="comfirmed" jdbcType="INTEGER" property="comfirmed" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+    <result column="deleted_at" jdbcType="TIMESTAMP" property="deletedAt" />
+    <result column="province_id" jdbcType="INTEGER" property="provinceId" />
+    <result column="city_id" jdbcType="INTEGER" property="cityId" />
+    <result column="district_id" jdbcType="INTEGER" property="districtId" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="community_id" jdbcType="INTEGER" property="communityId" />
+    <result column="api_updated_at" jdbcType="TIMESTAMP" property="apiUpdatedAt" />
+    <result column="apikey" jdbcType="VARCHAR" property="apikey" />
+    <result column="location" jdbcType="INTEGER" property="location" />
+    <result column="relation_id" jdbcType="INTEGER" property="relationId" />
+    <result column="invite_code" jdbcType="VARCHAR" property="inviteCode" />
+    <result column="default_consignee_addresses_id" jdbcType="INTEGER" property="defaultConsigneeAddressesId" />
+    <result column="inviter_code" jdbcType="VARCHAR" property="inviterCode" />
+    <result column="industry_id" jdbcType="INTEGER" property="industryId" />
+    <result column="source_id" jdbcType="INTEGER" property="sourceId" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+    <result column="followed_by" jdbcType="INTEGER" property="followedBy" />
+    <result column="consumption_point" jdbcType="INTEGER" property="consumptionPoint" />
+    <result column="channel" jdbcType="VARCHAR" property="channel" />
+    <result column="income" jdbcType="DECIMAL" property="income" />
+    <result column="count_of_order" jdbcType="INTEGER" property="countOfOrder" />
+    <result column="ding_user_id" jdbcType="VARCHAR" property="dingUserId" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="spread_way_id" jdbcType="SMALLINT" property="spreadWayId" />
+    <result column="wechat_unionid" jdbcType="VARCHAR" property="wechatUnionid" />
+    <result column="wechat_ticket" jdbcType="VARCHAR" property="wechatTicket" />
+    <result column="appointment_sign_status" jdbcType="TINYINT" property="appointmentSignStatus" />
+    <result column="url_from" jdbcType="VARCHAR" property="urlFrom" />
+    <result column="pushing_frequency_level_id" jdbcType="INTEGER" property="pushingFrequencyLevelId" />
+    <result column="appointment_sign_at" jdbcType="TIMESTAMP" property="appointmentSignAt" />
+    <result column="demand_area" jdbcType="DECIMAL" property="demandArea" />
+    <result column="acceptable_minimum_price" jdbcType="DECIMAL" property="acceptableMinimumPrice" />
+    <result column="acceptable_maximum_price" jdbcType="DECIMAL" property="acceptableMaximumPrice" />
+    <result column="feature_description" jdbcType="VARCHAR" property="featureDescription" />
+    <result column="growth_value" jdbcType="INTEGER" property="growthValue" />
+    <result column="membership_level_id" jdbcType="TINYINT" property="membershipLevelId" />
+    <result column="grading_at" jdbcType="TIMESTAMP" property="gradingAt" />
+    <result column="cert_url" jdbcType="VARCHAR" property="certUrl" />
+    <result column="other_requirement" jdbcType="VARCHAR" property="otherRequirement" />
+    <result column="gender_tendency" jdbcType="INTEGER" property="genderTendency" />
+    <result column="demand_max_area" jdbcType="DECIMAL" property="demandMaxArea" />
+    <result column="last_online" jdbcType="TIMESTAMP" property="lastOnline" />
+    <result column="qq_login_id" jdbcType="VARCHAR" property="qqLoginId" />
+    <result column="ordering_noticed" jdbcType="TINYINT" property="orderingNoticed" />
+    <result column="accept_wechat_notice" jdbcType="TINYINT" property="acceptWechatNotice" />
+    <result column="last_order" jdbcType="TIMESTAMP" property="lastOrder" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+    <result column="last_sold" jdbcType="TIMESTAMP" property="lastSold" />
+    <result column="last_push" jdbcType="TIMESTAMP" property="lastPush" />
+    <result column="order_count" jdbcType="INTEGER" property="orderCount" />
+    <result column="sale_amount" jdbcType="DECIMAL" property="saleAmount" />
+    <result column="verified" jdbcType="TINYINT" property="verified" />
+    <result column="email_at" jdbcType="TIMESTAMP" property="emailAt" />
+    <result column="is_coupon" jdbcType="TINYINT" property="isCoupon" />
+    <result column="approved_order" jdbcType="INTEGER" property="approvedOrder" />
+    <result column="rejected_order" jdbcType="INTEGER" property="rejectedOrder" />
+    <result column="site" jdbcType="INTEGER" property="site" />
+    <result column="booth" jdbcType="INTEGER" property="booth" />
+    <result column="supply" jdbcType="INTEGER" property="supply" />
+    <result column="active" jdbcType="INTEGER" property="active" />
+    <result column="excellent" jdbcType="TINYINT" property="excellent" />
+    <result column="approved_order_count" jdbcType="INTEGER" property="approvedOrderCount" />
+    <result column="is_subscribe" jdbcType="TINYINT" property="isSubscribe" />
+    <result column="first_order_at" jdbcType="TIMESTAMP" property="firstOrderAt" />
+    <result column="year_15_amount" jdbcType="DECIMAL" property="year15Amount" />
+    <result column="year_16_amount" jdbcType="DECIMAL" property="year16Amount" />
+    <result column="year_17_amount" jdbcType="DECIMAL" property="year17Amount" />
+    <result column="year_18_amount" jdbcType="DECIMAL" property="year18Amount" />
+    <result column="year_19_amount" jdbcType="DECIMAL" property="year19Amount" />
+    <result column="year_20_amount" jdbcType="DECIMAL" property="year20Amount" />
+    <result column="is_hide_money" jdbcType="TINYINT" property="isHideMoney" />
+    <result column="ebooking_openid" jdbcType="VARCHAR" property="ebookingOpenid" />
+    <result column="monthly_order_count" jdbcType="INTEGER" property="monthlyOrderCount" />
+    <result column="monthly_community_times" jdbcType="INTEGER" property="monthlyCommunityTimes" />
+    <result column="half_year_community_times" jdbcType="INTEGER" property="halfYearCommunityTimes" />
+    <result column="monthly_community_count" jdbcType="INTEGER" property="monthlyCommunityCount" />
+    <result column="monthly_approved_on_self" jdbcType="INTEGER" property="monthlyApprovedOnSelf" />
+    <result column="monthly_activity_days" jdbcType="INTEGER" property="monthlyActivityDays" />
+    <result column="quarter_activity_days" jdbcType="INTEGER" property="quarterActivityDays" />
+    <result column="monthly_sales_amount" jdbcType="DECIMAL" property="monthlySalesAmount" />
+    <result column="sales_amount" jdbcType="DECIMAL" property="salesAmount" />
+    <result column="field_order_count" jdbcType="INTEGER" property="fieldOrderCount" />
+    <result column="biz_point" jdbcType="INTEGER" property="bizPoint" />
+    <result column="point_used" jdbcType="INTEGER" property="pointUsed" />
+    <result column="point_charge" jdbcType="INTEGER" property="pointCharge" />
+    <result column="is_location" jdbcType="TINYINT" property="isLocation" />
+  </resultMap>
+
+  <!--&lt;select id="findByNameAndId" parameterType="map" resultType="user"&gt;-->
+    <!--select * from user where name like concat('%', #{name}, '%') and id=#{id}-->
+  <!--&lt;/select&gt;-->
+</mapper>

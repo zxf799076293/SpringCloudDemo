@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.10.10.191:8848
+        namespace: 9c3591ba-7c76-44fd-91fc-620e72ccadae
+  application:
+    name: account
+server:
+  port: 8083
+soul:
+  client:
+    register-type: nacos
+    server-lists: 10.10.10.191:8848
+    props:
+      contextPath: /snowaccount
+      port: 8083
+      nacosNameSpace: 13f87234-a69d-4188-b4f4-d0298efde6e6
+custom:
+  name: snow
+  age: 18
